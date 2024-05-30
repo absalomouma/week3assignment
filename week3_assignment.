@@ -1,0 +1,67 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNC7P9eBQmATGwDgMOjEmnl",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/absalomouma/week3assignment/blob/main/week3_assignment.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dQUBUxNxWUZO",
+        "outputId": "e7aca8ef-ba51-47c0-f9e2-03152f20ec47"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the original price of the item: 245\n",
+            "Enter the discount percentage: 20\n",
+            "Final price after applying discount: 196.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "def calculate_discount(price, discount_percent):\n",
+        "  if discount_percent >= 20:\n",
+        "      discounted_price = price - (price * discount_percent / 100)\n",
+        "      return discounted_price\n",
+        "  else:\n",
+        "      return price\n",
+        "original_price = float(input(\"Enter the original price of the item: \"))\n",
+        "discount_percentage = float(input(\"Enter the discount percentage: \"))\n",
+        "final_price = calculate_discount(original_price, discount_percentage)\n",
+        "if final_price == original_price:\n",
+        "  print(\"No discount applied. Final price:\", final_price)\n",
+        "else:\n",
+        "  print(\"Final price after applying discount:\", final_price)"
+      ]
+    }
+  ]
+}
